@@ -1,0 +1,25 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <br>
+    <table>
+        {% for field in form %}
+        <tr>
+            <td><strong>{{field.label_tag}}</strong></td>
+            <td>
+                {% if field.help_text %}
+                <!--<p class="help">{{ field.help_text|safe }}</p>-->
+                {{ field.help_text|safe }} <br>
+                {% endif %}
+                <p class="text-success">{{field}}</p>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

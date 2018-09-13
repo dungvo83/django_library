@@ -1,0 +1,17 @@
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+h1 {
+    color: black;
+}
+
+li a {
+    font-style: italic;
+}
+
+body {
+    background: azure;
+}
